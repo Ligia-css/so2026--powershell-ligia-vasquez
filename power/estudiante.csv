@@ -1,0 +1,9 @@
+$estudiante = @(
+    [PSCustomObject]@{carnet="001"; nombre="ligia López"; email="ligia@gmail.com"; telefono="4444-1111"}
+    [PSCustomObject]@{carnet="002"; nombre="manu Pérez"; email="manu@gmail.com"; telefono="5555-2222"}
+    [PSCustomObject]@{carnet="003"; nombre="oscar García"; email="oscar@gmail.com"; telefono="3333-3333"}
+    [PSCustomObject]@{carnet="004"; nombre="maria Morales"; email="maria@gmail.com"; telefono="6666-4444"}
+    [PSCustomObject]@{carnet="005"; nombre="angel Castillo"; email="angel@gmail.com"; telefono="2222-5555"}
+)
+
+$estudiante | Export-Csv -Path ".\estudiante.csv" -NoTypeInformation -Encoding UTF8
